@@ -4,14 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G Nitch's Site</title>
+    <title>Gregory Nitch</title>
+    <link rel="stylesheet" href="./static/styles.css">
 </head>
 
 <body>
-    <h1>
-        Welcome to my GitHub page!
-    </h1>
-    <p>I'll be adding stuff I've done and what I'm up to soon!</p>
+
+    <nav id="nav">
+        <a class="navBtn" href="https://gregory-nitch.github.io/">Home</a>
+        <a class="navBtn" href="https://gregory-nitch.github.io/bio">About Me</a>
+    </nav>
+
+    <div id="mainDiv">
+
+        <div id="headerDiv">
+            <h1>Hello and Welcome! I'm Greg.</h1>
+            <h3>Below are some of the projects I've worked on.</h3>
+        </div>
+
+        <div id="bodyContainer">
+
+            <div class="bodyCol"></div>
+
+            <div id="bodyDiv">
+
+                <div class="bodyEntry">
+                    <h3>Random Dungeon Generator Web App : AnaraScape</h3>
+
+                    <p>A fan of table top games I often found myself using online tools to create maps for my players.
+                        While rewarding, it can also be time consuming to prepare for games and create these maps by
+                        hand. While I found the available online tools to be useful I often found their themes and
+                        produces to be lacking in detail. Thats where AnaraScape comes in, its goal was to randomly
+                        generate maps for table top roleplayers so that they can save on preperation time, but not loose
+                        out on quality.</p>
+
+                    <p>I have quite a bit planed for this project and it is ongoing, but checkout these images from the
+                        Django prototype I've put together.</p>
+
+                    <div class="picContainer">
+                        <img class="pic" src="./static/anara1.png" alt="AnaraSample1">
+                        <img class="pic" src="./static/anara2.png" alt="AnaraSample2">
+                        <img class="pic" src="./static/anara3.png" alt="AnaraBeforeChange">
+                        <img class="pic" src="./static/anara4.png" alt="AnaraAfterChange">
+                    </div>
+
+                    <p>Achieving this functionally had lots of challenges such as:</p>
+                    <ul>
+                        <li>How to create designs in a random manner?</li>
+                        <li>How to validate random designs?</li>
+                        <li>How to merge the images together?</li>
+                    </ul>
+
+                    <p>At a high level these issues were overcome with:</p>
+                    <ul>
+                        <li>Logic to select random areas and place safegaurds based on random selections.</li>
+                        <li>Modified A* Search algorithm with a Queue Frontier to check every section can be reached
+                            from the entrance.</li>
+                        <li>Via the browser Canvas API unless image is to large which calls an AJAX request to the
+                            server to merge.</li>
+                    </ul>
+
+                </div>
+
+                <div class="bodyEntry">
+
+                    <h3>Qt UI Calculator App</h3>
+
+                    <p>Generally considering math as one of my weak points I thought a good project to get some skill in
+                        C++ would be to make a calculator that can take math expressions and return the result to the
+                        user. This project also showed how easy CSS usage in the Qt framework was.</p>
+
+                    <p>Currently this project is considered complete, but it certainly could have more features added,
+                        such as support for very large numbers.</p>
+
+                    <div class="picContainer">
+                        <img class="pic" src="./static/geocal.png" alt="geocal1">
+                    </div>
+
+                    <p>Some major hurdles were:</p>
+                    <ul>
+                        <li>How to parse the input expression?</li>
+                        <li>How to handle buttons controls so a valid expression is input?</li>
+                    </ul>
+
+                    <p>In the implementation this was solved with:</p>
+                    <ul>
+                        <li>The Shunt Yard algorithm to tokenize the input for reverse polish notation.</li>
+                        <li>A switch and object attributes to keep track of the state of the expression input.</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="bodyEntry">
+
+                    <h3>Qt UI Auto Service Mangament App</h3>
+
+                    <p>Rather than C++, this application was made in Python with the PyQt UI framework. Rather than
+                        targeting learning the framework this project was focused on refreshing some SQL skills prior to
+                        a class at UMGC. In the end it boosted skills for both and Python itself.</p>
+
+                    <p>This project is also seen as complete but rather than a SQLite database an alternative for
+                        multiple clients accessing the data would probabaly need to be adapted.</p>
+
+                    <div class="picContainer">
+                        <img class="pic" src="./static/PyQt6 Auto Repair.png" alt="autorepair1">
+                    </div>
+
+                    <p>Issues encountered:</p>
+                    <ul>
+                        <li>How to resolve many to many relationships?</li>
+                        <li>How to validate input from the large forms in a concise way?</li>
+                    </ul>
+
+                    <p>Solutions were:</p>
+                    <ul>
+                        <li>Implementation of a joining table (bridging table).</li>
+                        <li>Creation of a dispatch dictionary to look up and call the associated funtions.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
