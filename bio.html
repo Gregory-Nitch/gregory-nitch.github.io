@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gregory Nitch</title>
     <link rel="stylesheet" href="./static/styles.css">
+
 </head>
 
 <body>
@@ -15,10 +16,17 @@
         <a class="navBtn" href="https://gregory-nitch.github.io/bio">About Me</a>
     </nav>
 
+    <nav id="mobileNav">
+        <a class="mobileNavBtn" href="https://gregory-nitch.github.io/">Home</a>
+        <a class="mobileNavBtn" href="https://gregory-nitch.github.io/bio">About Me</a>    
+        <button class="mobileNavBtn" type="button" id="mobileNavMenuBtn" onclick="toggleMenu()">Menu</button>
+        <script type="text/javascript" src="./static/menu.js"></script>
+    </nav>
+
     <div id="mainDiv">
 
         <div id="headerDiv">
-            <h1>Gregory Nitch.</h1>
+            <h1>Gregory Nitch</h1>
             <h3>I hope to make the world a better place through code.</h3>
         </div>
 
