@@ -41,18 +41,19 @@
                     <p>A fan of table top games I often found myself using online tools to create maps for my players.
                         While rewarding, it can also be time consuming to prepare for games and create these maps by
                         hand. While I found the available online tools to be useful I often found their themes and
-                        produces to be lacking in detail. Thats where AnaraScape comes in, its goal was to randomly
+                        products to be lacking in detail. Thats where the idea for AnaraScape comes in, its goal was to
+                        randomly
                         generate maps for table top roleplayers so that they can save on preperation time, but not loose
                         out on quality.</p>
 
                     <p>I have quite a bit planed for this project and it is ongoing, but checkout these images from the
-                        Django prototype I've put together.</p>
+                        Blazor beta I've put together.</p>
 
                     <div class="picContainer">
                         <img class="pic" src="./static/anara1.png" alt="AnaraSample1">
                         <img class="pic" src="./static/anara2.png" alt="AnaraSample2">
-                        <img class="pic" src="./static/anara3.png" alt="AnaraBeforeChange">
-                        <img class="pic" src="./static/anara4.png" alt="AnaraAfterChange">
+                        <img class="pic" src="./static/anara3.png" alt="AnaraSample3">
+                        <img class="pic" src="./static/anara4.png" alt="AnaraSample4">
                     </div>
 
                     <p>Achieving this functionally had lots of challenges such as:</p>
@@ -64,13 +65,45 @@
 
                     <p>At a high level these issues were overcome with:</p>
                     <ul>
-                        <li>Logic to select random areas and place safegaurds based on random selections.</li>
+                        <li>Logic to select random areas and place safeguards based on random selections.</li>
                         <li>Modified A* Search algorithm with a Queue Frontier to check every section can be reached
                             from the entrance.</li>
-                        <li>Via the browser Canvas API unless image is to large which calls an AJAX request to the
-                            server to merge.</li>
+                        <li>Via the browser Canvas API unless image is to large which calls back to the Blazor server to
+                            request merged image byte array.</li>
                     </ul>
-                    <p>Checkout the code here: <a href="https://github.com/Gregory-Nitch/-Django-Archive-AnaraScape">Repo</a></p>
+                    <p>Checkout the code here: <a href="https://github.com/Gregory-Nitch/AnaraScape">Repo</a></p>
+
+                </div>
+
+                <div class="bodyEntry">
+
+                    <h3>Endless Runner Python Game</h3>
+                    <p>For my capstone in CS my group decided they wished to make a game to show our programming skills,
+                        and to have a little be of fun as well. I pitched my idea for an endless runner type game in
+                        space inspired by the mini games that come in browsers. My group liked my idea and I worked as
+                        the project manager for the rest of the course of the games development.</p>
+
+                    <p>Other than a few missing animations the game is complete and even has an exe for Windows 64bit
+                        and Linux (built on Ubuntu 24.04) available. I would like to thank my team members for their
+                        dedication on the project.</p>
+
+                    <div class="picContainer">
+                        <img class="pic" src="./static/pyfighter1.png" alt="pyfighter1">
+                    </div>
+
+                    <p>Some major hurdles were:</p>
+                    <ul>
+                        <li>How implment missile tracking?</li>
+                        <li>How to get enemies to navigate around objects?</li>
+                    </ul>
+
+                    <p>In the implementation this was solved with:</p>
+                    <ul>
+                        <li>Calculating the shortest angle towards the locked target and incrementally turning the
+                            projectile.</li>
+                        <li>A simple pathing algorithm to check for asteroids within 25 pixels of the enemy ship.</li>
+                    </ul>
+                    <p>Checkout the code here: <a href="https://github.com/Gregory-Nitch/PyFighter">Repo</a></p>
 
                 </div>
 
